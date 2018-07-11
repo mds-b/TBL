@@ -68,7 +68,6 @@ class DynamicMultipleChoiceField(forms.MultipleChoiceField):
     '''
     rewriting MultipleChoiceField class
     '''
-    
     def validate(self, value):
         if self.required and not value:
             raise ValidationError(self.error_messages['required'])
